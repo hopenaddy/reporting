@@ -1,0 +1,10 @@
+{
+  "name": "reporting",
+  "version": "0.0.0",
+  "authors": [
+    "Vova"
+  ],
+  "description": "reporting module template",
+  "main": "index.html",
+  "license": "MIT"
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load staticfiles %}
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static "bower_components/bootstrap/dist/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	
+	<title>Reporting</title>
+</head>
+<body>
+	<div class="container">
+	<form  action="/result/" method="POST" role="form" class="bs3-col-5">{% csrf_token %}
+		<div class="form-group">
+			<label for="sql_input">Sql</label>
+			<input type="textarea" rows="30" class="form-control" name="sql_data" id="sql_input" placeholder="Put yours SQL query here!">
+		</div>
+		
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+</body>
+</html>
