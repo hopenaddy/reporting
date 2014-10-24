@@ -11,5 +11,5 @@ def index(request):
 def result(request):
 	cursor = connection.cursor()
 	cursor.execute(request.POST['sql_data'])
-	row = cursor.fetchall
-	return row
+	row = cursor.fetchone()
+	return HttpResponse(row)
