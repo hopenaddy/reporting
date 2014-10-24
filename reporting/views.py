@@ -12,9 +12,12 @@ def result(request):
 	cursor = connection.cursor()
 	cursor.execute(request.POST['sql_data'])
 	row = cursor.fetchall()
-	cols = []
+
+	""" Getting array of columns """
+	cols = [] 
 	for   v in cursor.description:
 		cols.append(v[0])
+
 	context = {'data':row, 'cols':cols}
 	return render(request, 'reporting/result.html', context)
 	
