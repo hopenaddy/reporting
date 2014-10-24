@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load staticfiles %}
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{% static "bower_components/bootstrap/dist/css/bootstrap.min.css" %}">
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	
+	<title>Reporting</title>
+</head>
+<body>
+	<div class="container">
+	 	<table class="table">
+	 	{% for n in cols %}
+	 		<th>{{n}}</th>
+	 	{% endfor %}
+	 	{% for d in data %}
+	 		<tr>
+	 			{% for k in d %}
+	 				<td>{{k}}</td>
+	 			{% endfor %}	
+	 		</tr>
+	 	{% endfor %}
+	 	</table>
+</div>
+</body>
+</html>
