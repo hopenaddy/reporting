@@ -3,7 +3,7 @@ from fabvenv import Venv
 
 ROOT = "/opt/lv128/reporting"
 def deploy():
-	venv = Venv(ROOT, "requirements.txt")
+    venv = Venv(ROOT, "requirements.txt")
     if not venv.exists():
         venv.create()
     venv.install()
