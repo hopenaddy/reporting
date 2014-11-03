@@ -1,0 +1,11 @@
+[Unit]
+Description=LVWEB-128 Example
+
+[Service]
+User=deploy
+Group=deploy
+Environment="APPDIR=/opt/lv128/Reporting/"
+ExecStart=/bin/bash -c "source $APPDIR/bin/activate ; python $APPDIR/manage.py -l $APPDIR/../log/Reporting.log -p 8881"
+
+[Install]
+WantedBy=multi-user.target
